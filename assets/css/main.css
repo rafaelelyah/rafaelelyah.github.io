@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=K2D:wght@400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'K2D', sans-serif;
+    font-weight: 500;
+    background-color: #191919;
+    color: #e2dddb;
+    transition: 300ms;
+
+}
+header{
+    border-bottom: 1px solid #262626;
+}
+.logo{
+    width: 30%;
+}
+.logo h1{
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 28px;
+}
+.mprincipal{
+    display: flex;
+    align-items:center;
+    height: 100px;
+    width: 80%;
+    margin: 0 auto;
+}
+nav{
+    display: flex;
+    justify-content: right;
+    width: 70%;
+}
+nav ul{
+    list-style-type: none;
+    display: flex;
+}
+nav ul li{
+    text-transform: uppercase;
+    font-size: 0.7rem;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #535353;
+    padding: 20px;
+    font-weight: 800;
+    transition: 300ms;
+}
+nav ul li a:hover{
+    color: #e2dddb;
+    text-decoration: underline;
+}
+.patual{
+    text-decoration: underline;
+    color: #e2dddb;
+}
+main{
+    margin: 50px 0;
+}
+.sobreMim{
+    width: 80%;
+    margin: 0 auto;
+}
+footer{
+    background-color: #e2dddb;
+    color:#262626;
+    padding: 100px 10%;
+ 
+}
+footer .footerContent{
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+}
+footer div h2{
+    font-size: 22px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+footer div h3{
+    font-weight: 500;
+    font-size: 15px;
+}
+
+footer div ul{
+    list-style-type: none;
+}
+.footerTitle{
+    font-weight: bold;
+}
+.social1, .social2{
+    display: flex;
+    justify-content: right;
+    align-items: top;
+}
+.socialImage{
+    width: 30px;
+    padding: 10px;
+    display: none;
+}
+.copy{
+    margin-top: 30px;
+}
