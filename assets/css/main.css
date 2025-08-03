@@ -10,6 +10,7 @@ header {
   text-align: center;
   padding: 2rem;
   background-color: #222;
+  
 }
 
 nav ul {
@@ -29,21 +30,21 @@ nav a {
 main {
   padding: 2rem;
   max-width: 800px;
-  margin: auto;
 }
 
-section {
-  margin-bottom: 2rem;
-}
-
-/* Carrossel estilo Netflix */
-#carrossel-projetos {
+#sobre-mim{
   padding: 2rem;
+}
+
+/* Carrossel */
+#carrossel-projetos {
+  padding: 4rem;
   background-color: #111;
+
 }
 
 .carrossel-container {
-  position: relative;
+
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -76,10 +77,10 @@ section {
   border-radius: 8px;
   position: relative;
   transition: transform 0.3s ease;
-  overflow: hidden; /* impede que conteúdo ultrapasse */
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end; /* força conteúdo para base */
+  justify-content: flex-end
 }
 
 .card-projeto:hover {
@@ -113,8 +114,8 @@ section {
 
 .card-projeto .conteudo a,
 .card-projeto .tag {
-  display: inline-block;     /* 👈 Tamanho mínimo desejado */
-  text-align: center;       /* 👈 Centraliza o texto dentro da tag */
+  display: inline-block;
+  text-align: center;  
   background-color: rgba(255, 255, 255, 0.2);
   color: white;
   padding: 0.4rem 0.8rem;
