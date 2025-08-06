@@ -3,62 +3,110 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rafael Elyah</title>
+  <title>Rafael Elyah - Thinking, Development & Concept</title>
   <link rel="stylesheet" href="assets/css/main.css" />
+  <script src="https://kit.fontawesome.com/f2e4cedd87.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
-  <header>
-    <h1>Rafael Elyah</h1>
-    <p>Thinking | Development | Concept</p>
-    <nav>
-      <ul>
-        <li><a href="https://www.behance.net/rafaelelyah" target="_blank">Behance</a></li>
-        <li><a href="https://github.com/rafaelelyah" target="_blank">GitHub</a></li>
-        <li><a href="https://br.pinterest.com/rafaelelyah" target="_blank">Pinterest</a></li>
-        <li><a href="https://www.linkedin.com/in/rafaelelyah/" target="_blank">LinkedIn</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main>
-    <section id="sobre-mim">
-      <h2>Sobre mim</h2>
-      <p>
-        Artista multidisciplinar com formação em Design Gráfico e Desenvolvimento Web. Crio experiências visuais e sonoras que conectam estética, funcionalidade e emoção.
-      </p>
-    </section>
-  </main>
-
-  <section id="carrossel-projetos">
-    <h2>Projetos em destaque</h2>
-    <div class="carrossel-container">
-      <button id="prev">&#10094;</button>
-      <div class="carrossel-horizontal">
-        <div class="card-projeto" style="background-image: url('img/dbot.jpg');">
-          <div class="conteudo">
-            <h2>Asarado DBot</h2>
-            <p>Bot para automação e interação em servidores. Rápido, personalizável e cheio de personalidade.</p>
-            <a href="https://github.com/rafaelelyah/asarado-dbot" target="_blank">Ver projeto</a>
-          </div>
-        </div>
-
-        <div class="card-projeto" style="background-image: url('img/asarcoin.jpg');">
-          <div class="conteudo">
-            <h2>ASAR Coin</h2>
-            <p>Uma nova moeda digital com identidade criativa. Em breve.</p>
-            <span class="tag">Em breve</span>
-          </div>
-        </div>
-
-        <!-- Mais cards aqui -->
-      </div>
-      <button id="next">&#10095;</button>
+<header id="main-header">
+  <nav class="nav-container">
+    <div class="nav-links">
+      <a href="#dev">Dev</a>
+      <a href="#design">Design</a>
+    </div>
+    <div class="nav-logo">
+      <a href="#hero">Rafael Elyah</a>
+    </div>
+    <div class="nav-links">
+      <a href="#ilustracao">Ilustração</a>
+      <a href="#projetos">Projetos</a>
+    </div>
+  </nav>
+</header>
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="hero-overlay">
+      <h1>Bem-vindo ao meu portfólio</h1>
     </div>
   </section>
 
-  <footer>
-    <p>&copy; 2025 Rafael Elyah</p>
-  </footer>
+  <!-- Dev Section -->
+  <section id="dev">
+    <h2>Sobre mim como Dev</h2>
+    <p>Texto sobre sua trajetória, habilidades e tecnologias que domina.</p>
+  </section>
+
+  <!-- Projetos Dev Section -->
+  <section id="projetos-dev">
+    <h2>Projetos Dev</h2>
+    <div class="carousel-dev">
+      <!-- Cards serão inseridos aqui via JS -->
+    </div>
+  </section>
+
+  <!-- Design Section -->
+  <section id="design">
+    <h2>Design</h2>
+    <div class="design-grid">
+      <!-- 4 imagens por tela -->
+    </div>
+<button id="design-prev"><i class="fa-solid fa-arrow-left"></i></button>
+<button id="design-next"><i class="fa-solid fa-arrow-right"></i></button>
+  </section>
+
+  <!-- Ilustração Section -->
+  <section id="ilustracao">
+    <h2>Ilustração</h2>
+    <div class="ilustracao-container">
+      <div class="gallery-trigger" id="concept-art">Concept Art</div>
+      <div class="gallery-trigger" id="artistica">Ilustração Artística</div>
+    </div>
+    <!-- Pop-up Gallery -->
+    <div id="gallery-popup" class="hidden">
+      <button id="close-gallery">Fechar</button>
+      <div class="gallery-content">
+        <!-- Imagens da galeria serão inseridas aqui -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Projetos em andamento Section -->
+  <section id="projetos">
+    <h2>Projetos em andamento</h2>
+    <div class="carousel-projetos">
+      <!-- Cards maiores via JS -->
+    </div>
+  </section>
+
+  <!-- Contato Section -->
+<section id="contato">
+  <h2>Contato</h2>
+  <p>
+    Você pode entrar em contato comigo pelo 
+    <a href="https://wa.me/11957649475" target="_blank">WhatsApp</a>, 
+    ou pelas minhas redes sociais:
+  </p>
+
+  <ul class="contato-redes">
+    <li><a href="https://github.com/rafaelelyah" target="_blank">GitHub</a></li>
+    <li><a href="https://www.behance.net/rafaelelyah" target="_blank">Behance</a></li>
+    <li><a href="https://www.linkedin.com/in/rafaelelyah" target="_blank">LinkedIn</a></li>
+    <li><a href="https://www.pinterest.com/rafaelelyah" target="_blank">Pinterest</a></li>
+  </ul>
+
+  <p>
+    Ou pode me enviar um e-mail como os maias e os incas:<br />
+    <a href="mailto:rafaelelyah@outlook.com">rafaelelyah@outlook.com</a>
+  </p>
+</section>
+
+  <!-- Rodapé -->
+<footer>
+  <div class="footer-content">
+    <p>© 2025 Rafael. Todos os direitos reservados.</p>
+  </div>
+</footer>
 
   <script src="assets/js/main.js"></script>
 </body>
