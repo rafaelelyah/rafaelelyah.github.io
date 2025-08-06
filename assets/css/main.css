@@ -8,7 +8,6 @@
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
   background-color: #111;
   color: #fff;
   line-height: 1.6;
@@ -18,13 +17,25 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1.5rem;
 }
 
+/* Títulos */
+h1, h2, h3 {
+  font-family: 'Sora', sans-serif;
+  font-weight: 400;
+}
+
+/* Corpo do texto */
+body, p, li {
+  font-family: 'Figtree', sans-serif;
+  font-weight: 400;
+}
+
 /* Header */
 #main-header {
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
-  transition: background-color 0.3s ease;
+  transition: opacity 0.3s ease, visibility 0.3s ease, background-color 0.3s ease;
 }
 
 .nav-container {
@@ -43,7 +54,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav-logo a {
   font-size: 1.5rem;
-  font-weight: bold;
   text-decoration: none;
   color: #fff;
 }
@@ -79,24 +89,23 @@ html {
   background: url('sua-imagem.jpg') center/cover no-repeat;
   display: flex;
   align-items: center;
-  justify-content: center;
   position: relative;
 }
 
 .hero-overlay {
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 2rem;
-  text-align: center;
+  padding: 5rem;
+  width: 100%;
 }
 
 .hero-overlay h1 {
-  font-size: 3rem;
+  margin-left: 10%;
+  margin-bottom: 10%;
 }
 
 /* Dev Section */
 #dev {
-  padding: 10rem 2rem;
-  background-color: #1a1a1a;
+  padding: 10rem 5rem;
+  background: url('sua-imagem.jpg') center/cover no-repeat;
 }
 
 #dev h2 {
@@ -106,8 +115,9 @@ html {
 
 /* Projetos Dev Section */
 #projetos-dev {
-  padding: 4rem 2rem;
+  padding: 4rem 5rem;
   background-color: #222;
+  
 }
 
 .carousel-dev {
@@ -122,42 +132,112 @@ html {
 
 /* Card estilo Netflix */
 .carousel-dev .card {
-  min-width: 250px;
+  min-width: 300px;
   background-color: #333;
   padding: 1rem;
   border-radius: 8px;
 }
 
-i{
-  color: #fff;
-}
-
 /* Design Section */
 #design {
-  height: 100vh;
-  padding: 5rem 2rem;
-  background-color: #0a0a0a;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: relative;
+  padding: 5rem 5rem;
+  background-color: #3f3f3f;
+  position: relative
 }
 
-.design-grid {
-  flex: 1;
+.design-mural {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  gap: 3rem;
-  width: 100%;
-  height: 100%;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-auto-rows: 200px;
+  grid-auto-flow: dense;
+  gap: 16px;
+  transition: min-height 0.4s ease;
+
 }
 
-.design-grid img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 0; /* remove bordas arredondadas */
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.fade-in {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.design-card {
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  color: #fff;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.design-card.grande {
+  grid-column: span 3;
+  grid-row: span 3;
+}
+.design-card.pequeno {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+.design-card.medio {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+.design-card.cover {
+  grid-column: span 3;
+  grid-row: span 1;
+}
+
+.design-card:hover {
+  transform: scale(1.03);
+}
+
+.design-nav {
+  text-align: center;
+  margin-top: 20px;
+}
+.design-nav button {
+  padding: 10px 16px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: #4a4a4a;
+  color: #fff;
+  font-family: 'Sora', sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.design-nav button:hover {
+  background-color: #333;
+}
+
+.design-indicador {
+  margin-top: 10px;
+  font-family: 'Sora', sans-serif;
+  font-size: 0.95rem;
+  color: #aaa;
+}
+
+.card-content {
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 20px;
+}
+
+.card-content h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.card-content p {
+  margin-top: 6px;
+  font-size: 0.9rem;
 }
 
 /* Botões de navegação */
@@ -204,7 +284,7 @@ i{
 /* Ilustração Section */
 #ilustracao {
   height: 100vh;
-  padding: 5rem 2rem;
+  padding: 5rem 5rem;
   background-color: #181818;
   display: flex;
   flex-direction: column;
@@ -221,7 +301,6 @@ i{
 
 .gallery-trigger {
   flex: 1;
-  background-color: #2a2a2a;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -236,49 +315,107 @@ i{
   background-color: #444;
 }
 
+/* Galeria com fade */
+#gallery-popup {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#gallery-popup.fade-in {
+  opacity: 1;
+}
+
+#gallery-popup.fade-out {
+  opacity: 0;
+}
+
+.galeria-ativa #main-header {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+#concept-art {
+  background-image: url('assets/img/design/asar.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+#artistica {
+  background-image: url('assets/img/artistica-cover.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
 /* Pop-up Gallery */
 #gallery-popup {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(15, 15, 15, 0.95);
+  width: 100vw;
+  height: 100vh;
+  background-color: #0a0a0a;
+  z-index: 999;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
-  justify-content: center;
-  z-index: 999;
+  overflow-y: auto;
+  padding: 2rem;
+  transition: opacity 0.3s ease;
 }
 
 #gallery-popup.hidden {
   display: none;
 }
 
-#close-gallery {
-  background-color: #444;
-  color: white;
+.gallery-scroll {
+  display: flex;
+  gap: 2rem;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  background-color: #0a0a0a; /* fundo escuro total */
   border: none;
-  padding: 0.5rem 1rem;
-  margin-bottom: 1rem;
-  cursor: pointer;
+}
+
+.gallery-scroll::-webkit-scrollbar {
+  display: none; /* oculta scrollbar */
 }
 
 .gallery-content {
   display: flex;
-  gap: 1rem;
-  overflow-x: auto;
-  padding: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0; /* sem espaço entre imagens */
+  width: 100%;
 }
 
 .gallery-content img {
-  max-height: 80vh;
-  border-radius: 4px;
+  width: 50%;     /* metade da largura da viewport */
+  object-fit: cover;
+  border-radius: 0;
+  margin: 0;
+  padding: 0;
+  box-shadow: none;
+}
+
+/* Botão X */
+#close-gallery {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 1.5rem;
+  background: transparent;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
 }
 
 /* Projetos em andamento Section */
 #projetos {
-  padding: 4rem 2rem;
+  padding: 8rem 5rem;
   background-color: #222;
 }
 
@@ -289,14 +426,33 @@ i{
 }
 
 .carousel-projetos .card {
-  min-width: 350px;
+  min-width: 500px;
   background-color: #333;
   padding: 2rem;
   border-radius: 8px;
 }
+.card a {
+  display: inline-block;
+  padding: 8px 16px;
+  margin: 10px 0 0 0;
+  border: 1px solid #dddddd;
+  border-radius: 6px;
+  text-decoration: none;
+  font-family: 'Figtree', sans-serif;
+  font-weight: 500;
+  color: #dddddd;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.card a:hover {
+  background-color: #4A4A4A;
+  color: #fff;
+  border-color: #4A4A4A;
+}
 
 #contato {
-  padding: 6rem 2rem;
+  padding: 6rem 5rem;
   background-color: #1a1a1a;
   text-align: center;
 }
@@ -344,4 +500,162 @@ footer {
   max-width: 800px;
   margin: 0 auto;
   font-size: 0.9rem;
+}
+.carousel-dev,
+.carousel-projetos {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  padding-bottom: 1rem;
+
+  /* Estilo moderno da barra para navegadores compatíveis */
+  scrollbar-width: thin;
+  scrollbar-color: #444 transparent;
+}
+
+/* Estilo específico para navegadores WebKit (Chrome, Safari, Edge) */
+.carousel-dev::-webkit-scrollbar,
+.carousel-projetos::-webkit-scrollbar {
+  height: 6px; /* altura fina da barra */
+}
+
+.carousel-dev::-webkit-scrollbar-track,
+.carousel-projetos::-webkit-scrollbar-track {
+  background: transparent; /* sem fundo chamativo */
+}
+
+.carousel-dev::-webkit-scrollbar-thumb,
+.carousel-projetos::-webkit-scrollbar-thumb {
+  background-color: #444; /* cor sutil da barra */
+  border-radius: 3px;
+}
+
+/* Estilo para o botão de menu */
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #111;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    padding: 1rem;
+    z-index: 10;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .carousel-dev,
+  .carousel-projetos {
+    flex-wrap: nowrap;
+    scroll-snap-type: x mandatory;
+    overflow-x: auto;
+  }
+
+  .carousel-dev > *,
+  .carousel-projetos > * {
+    min-width: 100%;
+    scroll-snap-align: start;
+  }
+}
+@media (max-width: 768px) {
+  .ilustracao-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch;
+  }
+
+  .gallery-trigger {
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+    background-color: #222;
+    color: #fff;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5rem;
+  position: relative;
+}
+
+.nav-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    flex-direction: column;
+    background-color: #111;
+    width: 100%;
+    padding: 1rem;
+    z-index: 1000;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-logo {
+    order: 1;
+  }
+
+  .hamburger {
+    order: 2;
+  }
+
+  .nav-container {
+    justify-content: space-between;
+  }
 }
