@@ -3,8 +3,13 @@ import { execSync } from 'child_process';
 import fs from 'fs';
 import path from 'path';
 
-const type = process.argv[2] || 'patch'; // patch, minor ou major
-const msg = process.argv[3] || 'Deploy automático';
+const validTypes = ['patch', 'minor', 'major'];
+const type = process.argv[2] || 'patch';
+
+if (!validTypes.includes(type)) {
+  console.error(`❌ Tipo de versão inválido: "${type}". Use patch, minor ou major.`);
+  process.exit(1);
+}
 
 // Atualiza versão no package.json
 function bumpVersion(type) {
@@ -26,32 +31,27 @@ function bumpVersion(type) {
 const newVersion = bumpVersion(type);
 
 // Build do projeto
-console.log('🔧 Compilando com Vite...');
-execSync('vite build', { stdio: 'inherit' });
-
-// Copiar arquivos da dist/ para a raiz
-const distPath = path.resolve('dist');
-const files = fs.readdirSync(distPath);
-
-console.log('📦 Copiando arquivos da dist/ para a raiz...');
-files.forEach(file => {
-  const src = path.join(distPath, file);
-  const dest = path.join('.', file);
-
-  if (fs.existsSync(dest) && ['index.html', 'assets'].includes(file)) {
-    fs.rmSync(dest, { recursive: true, force: true });
-  }
-
-  fs.cpSync(src, dest, { recursive: true });
-});
-
-// Commit e push (somente se houver mudanças)
 try {
-  console.log('🚀 Fazendo commit e push...');
-  execSync('git add .');
-  execSync('git diff --cached --quiet || git commit -m "' + msg + '"');
-  execSync('git push origin main', { stdio: 'inherit' });
-  console.log('✅ Deploy finalizado com sucesso!');
+  console.log('🔧 Compilando com Vite...');
+  execSync('vite build', { stdio: 'inherit' });
 } catch (err) {
-  console.log('⚠️ Nenhuma alteração para commit ou erro no push.');
+  console.error('❌ Erro na compilação:', err.message);
+  process.exit(1);
 }
+
+// Copiar arquivos da dist/ para docs/
+const distPath = path.resolve('dist');
+const targetPath = path.resolve('docs');
+
+console.log('📦 Atualizando pasta docs/...');
+if (fs.existsSync(targetPath)) {
+  fs.rmSync(targetPath, { recursive: true, force: true });
+}
+fs.mkdirSync(targetPath);
+fs.cpSync(distPath, targetPath, { recursive: true });
+
+// Criar .nojekyll (opcional)
+fs.writeFileSync(path.join(targetPath, '.nojekyll'), '');
+
+console.log(`✅ Deploy local gerado com sucesso! Versão: ${newVersion}`);
+console.log('📁 Arquivos prontos em docs/. Faça o commit manual no VS Code.');
