@@ -5,13 +5,26 @@
 /* Grid utilitário */
 .container {
   width: 100%;
-  max-width: 1200px;
   margin: 0 auto;
   padding: 0 var.$spacing-sm;
 }
-.fullscreen-section {
+.hero-section{
   min-height: 100vh;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var.$spacing-md var.$spacing-lg;
+  text-align: center;
+}
+.fullscreen-section {
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  padding: var.$spacing-md var.$spacing-lg;
+  text-align: center;
+}
+.mid-section{
+  min-height: 50vh;
   align-items: center;
   justify-content: center;
   padding: var.$spacing-md var.$spacing-lg;

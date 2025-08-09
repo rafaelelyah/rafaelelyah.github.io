@@ -10,14 +10,40 @@
   color: var.$color-text-light;
 
   @include mixins.flex-space-between;
+  align-items: center; // Garante alinhamento vertical
+  
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
 
-  .logo {
-    font-size: var.$font-size-nav-logo;
-    font-weight: bold;
+  .nav-logo img{
+    height: 25px;
+    display: block;
   }
 
   .menu {
     display: flex;
     gap: var.$spacing-md;
+  }
+  .nav-logo {
+      font-size: var.$font-size-nav-logo;
+      font-weight: bold;
+    }
+
+  .nav-links {
+    display: flex;
+    gap: var.$spacing-md;
+
+    a {
+      color: var.$color-text-light;
+      text-decoration: none;
+
+      &:hover {
+        color: var.$color-accent;
+      }
+    }
   }
 }
