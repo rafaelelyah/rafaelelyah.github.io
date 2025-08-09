@@ -28,10 +28,15 @@ Este repositório contém o código-fonte e os arquivos de deploy do meu portfó
 ## 📁 Estrutura do projeto
 
 ├── src/           # Código-fonte do site
+
 ├── docs/          # Arquivos finais para publicação
+
 ├── deploy.js      # Script de build e versão
+
 ├── vite.config.js # Configuração do Vite
+
 ├── package.json   # Dependências e scripts
+
 └── .gitignore     # Arquivos ignorados pelo Git
 
 ---
