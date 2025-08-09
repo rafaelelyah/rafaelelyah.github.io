@@ -1,0 +1,16 @@
+// src/styles/base/_base.scss
+
+@use '../abstracts/variables';
+
+button {
+  font-family: inherit;
+  font-size: variables.$font-size-base;
+  cursor: pointer;
+  border: none;
+  border-radius: variables.$border-radius-sm;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}

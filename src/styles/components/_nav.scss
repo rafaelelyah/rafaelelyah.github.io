@@ -1,0 +1,62 @@
+// src/styles/components/_nav.scss
+
+@use '../abstracts/mixins';
+@use '../abstracts/variables' as var;
+
+.nav-container {
+  @include mixins.flex-space-between;
+  padding: var.$spacing-sm var.$spacing-lg;
+  position: relative;
+}
+
+.nav-logo {
+  font-size: var.$font-size-nav-logo;
+  font-weight: bold;
+  color: var.$color-text-light;
+}
+
+.nav-links {
+  display: flex;
+  gap: var.$spacing-md;
+
+  @include mixins.respond-to(md) {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    flex-direction: column;
+    background-color: var.$color-background-dark;
+    width: 100%;
+    padding: var.$spacing-sm;
+    z-index: 1000;
+
+    &.active {
+      display: flex;
+    }
+  }
+}
+
+.hamburger {
+  display: none;
+  font-size: var.$font-size-hamburger;
+  cursor: pointer;
+  color: var.$color-text-light;
+
+  @include mixins.respond-to(md) {
+    display: block;
+  }
+}
+
+@include mixins.respond-to(md) {
+  .nav-logo {
+    order: 1;
+  }
+
+  .hamburger {
+    order: 2;
+  }
+
+  .nav-container {
+    justify-content: space-between;
+  }
+}

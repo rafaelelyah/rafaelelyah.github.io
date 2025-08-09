@@ -1,0 +1,47 @@
+// src/styles/abstracts/_mixins.scss
+
+@use 'variables' as var;
+
+// 📱 Media query mixin
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == md {
+    @media (max-width: var.$breakpoint-md) {
+      @content;
+    }
+  }
+}
+
+// 📦 Flex container
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+// 📐 Spacing shorthand
+@mixin padding-x($value) {
+  padding-left: $value;
+  padding-right: $value;
+}
+
+@mixin padding-y($value) {
+  padding-top: $value;
+  padding-bottom: $value;
+}
+
+// 🎯 Scroll snap (custom utility)
+@mixin scroll-snap-x {
+  scroll-snap-type: x mandatory;
+  overflow-x: auto;
+}
+
+@mixin scroll-snap-item {
+  min-width: 100%;
+  scroll-snap-align: start;
+}

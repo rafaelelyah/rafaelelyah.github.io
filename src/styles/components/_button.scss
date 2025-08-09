@@ -1,0 +1,26 @@
+// src/styles/components/_button.scss
+
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+@use '../abstracts/functions';
+
+.button {
+  width: 100%;
+  padding: variables.$spacing-sm;
+  text-align: center;
+  background-color: variables.$color-background-primary;
+  color: variables.$color-text-light;
+  border-radius: variables.$border-radius-sm;
+  font-size: variables.$font-size-base;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: functions.shade(variables.$color-background-primary, 10%);
+  }
+
+  @include mixins.respond-to(md) {
+    padding: variables.$spacing-sm;
+    font-size: variables.$font-size-base;
+  }
+}

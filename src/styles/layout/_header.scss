@@ -1,0 +1,23 @@
+// src/styles/components/_header.scss
+
+@use '../abstracts/mixins';
+@use '../abstracts/variables' as var;
+
+/* Header básico */
+.header {
+  background-color: var.$color-background-dark;
+  padding: var.$spacing-sm var.$spacing-lg;
+  color: var.$color-text-light;
+
+  @include mixins.flex-space-between;
+
+  .logo {
+    font-size: var.$font-size-nav-logo;
+    font-weight: bold;
+  }
+
+  .menu {
+    display: flex;
+    gap: var.$spacing-md;
+  }
+}

@@ -1,0 +1,8 @@
+// src/styles/abstracts/_functions.scss
+
+@use 'sass:color';
+
+// Escurece uma cor em X%
+@function shade($color, $percentage) {
+  @return color.scale($color, $lightness: -$percentage);
+}
