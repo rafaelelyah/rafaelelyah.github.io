@@ -1,47 +1,43 @@
-// dev-carousel.js
+export class DevCarousel {
+  constructor(options = {}) {
+    this.containerSelector = options.containerSelector || '.carousel-dev';
+    this.prevSelector = options.prevSelector || '#dev-prev';
+    this.nextSelector = options.nextSelector || '#dev-next';
+    this.paginaAtual = 0;
+    this.totalPaginas = options.totalPaginas || 1;
 
-const projetosDev = [
-  {
-    nome: "Asarado DBot",
-    descricao: "Descrição do Projeto 1",
-    link: "https://github.com/seuusuario/projeto1"
-  },
-  {
-    nome: "Projeto 2",
-    descricao: "Descrição do Projeto 2",
-    link: "https://github.com/seuusuario/projeto2"
-  },
-  {
-    nome: "Projeto 2",
-    descricao: "Descrição do Projeto 2",
-    link: "https://github.com/seuusuario/projeto2"
-  },
-  {
-    nome: "Projeto 2",
-    descricao: "Descrição do Projeto 2",
-    link: "https://github.com/seuusuario/projeto2"
-  },
-  {
-    nome: "Projeto 2",
-    descricao: "Descrição do Projeto 2",
-    link: "https://github.com/seuusuario/projeto2"
-  },
-  {
-    nome: "Projeto 2",
-    descricao: "Descrição do Projeto 2",
-    link: "https://github.com/seuusuario/projeto2"
+    this.init();
   }
-];
 
-const carouselDev = document.querySelector(".carousel-dev");
+  init() {
+    this.container = document.querySelector(this.containerSelector);
+    this.prevBtn = document.querySelector(this.prevSelector);
+    this.nextBtn = document.querySelector(this.nextSelector);
 
-projetosDev.forEach(proj => {
-  const card = document.createElement("div");
-  card.className = "card";
-  card.innerHTML = `
-    <h3>${proj.nome}</h3>
-    <p>${proj.descricao}</p>
-    <a href="${proj.link}" target="_blank">Ver no GitHub</a>
-  `;
-  carouselDev.appendChild(card);
-});
+    if (this.prevBtn) {
+      this.prevBtn.addEventListener('click', () => this.prevPage());
+    }
+    if (this.nextBtn) {
+      this.nextBtn.addEventListener('click', () => this.nextPage());
+    }
+    // Adicione lógica para renderizar os cards do carousel
+  }
+
+  prevPage() {
+    if (this.paginaAtual > 0) {
+      this.paginaAtual--;
+      // Atualize o carousel
+    }
+  }
+
+  nextPage() {
+    if (this.paginaAtual < this.totalPaginas - 1) {
+      this.paginaAtual++;
+      // Atualize o carousel
+    }
+  }
+}
+
+// Para usar no main.js:
+// import { DevCarousel } from './dev-carousel.js';
+// const devCarousel = new DevCarousel({ totalPaginas: 3 });

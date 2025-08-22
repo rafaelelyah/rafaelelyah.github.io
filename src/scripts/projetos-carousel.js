@@ -1,20 +1,43 @@
-// projetos-carousel.js
+export class ProjetosCarousel {
+  constructor(options = {}) {
+    this.containerSelector = options.containerSelector || '.carousel-projetos';
+    this.prevSelector = options.prevSelector || '#projetos-prev';
+    this.nextSelector = options.nextSelector || '#projetos-next';
+    this.paginaAtual = 0;
+    this.totalPaginas = options.totalPaginas || 1;
 
-const projetosAndamento = [
-  { nome: "Projeto A", descricao: "Descrição do Projeto A", link: "#" },
-  { nome: "Projeto B", descricao: "Descrição do Projeto B", link: "#" },
-  { nome: "Projeto B", descricao: "Descrição do Projeto B", link: "#" }
-];
+    this.init();
+  }
 
-const carouselProjetos = document.querySelector(".carousel-projetos");
+  init() {
+    this.container = document.querySelector(this.containerSelector);
+    this.prevBtn = document.querySelector(this.prevSelector);
+    this.nextBtn = document.querySelector(this.nextSelector);
 
-projetosAndamento.forEach(proj => {
-  const card = document.createElement("div");
-  card.className = "card";
-  card.innerHTML = `
-    <h3>${proj.nome}</h3>
-    <p>${proj.descricao}</p>
-    <a href="${proj.link}" target="_blank">Ver detalhes</a>
-  `;
-  carouselProjetos.appendChild(card);
-});
+    if (this.prevBtn) {
+      this.prevBtn.addEventListener('click', () => this.prevPage());
+    }
+    if (this.nextBtn) {
+      this.nextBtn.addEventListener('click', () => this.nextPage());
+    }
+    // Adicione lógica para renderizar os projetos
+  }
+
+  prevPage() {
+    if (this.paginaAtual > 0) {
+      this.paginaAtual--;
+      // Atualize o carousel
+    }
+  }
+
+  nextPage() {
+    if (this.paginaAtual < this.totalPaginas - 1) {
+      this.paginaAtual++;
+      // Atualize o carousel
+    }
+  }
+}
+
+// Para usar no main.js:
+// import { ProjetosCarousel } from './projetos-carousel.js';
+// const projetosCarousel = new ProjetosCarousel({ totalPaginas: 2 });

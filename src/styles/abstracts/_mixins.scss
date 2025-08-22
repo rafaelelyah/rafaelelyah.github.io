@@ -24,6 +24,14 @@
   align-items: center;
 }
 
+@mixin fixed-spacing($top, $left, $right) {
+  position: fixed;
+  top: $top;
+  left: $left;
+  right: $right;
+  z-index: 1000;
+}
+
 // 📐 Spacing shorthand
 @mixin padding-x($value) {
   padding-left: $value;
@@ -44,4 +52,11 @@
 @mixin scroll-snap-item {
   min-width: 100%;
   scroll-snap-align: start;
+}
+
+@mixin responsive-padding($desktop, $mobile) {
+  padding: $desktop;
+  @media (max-width: 768px) {
+    padding: $mobile;
+  }
 }

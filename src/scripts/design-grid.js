@@ -1,68 +1,54 @@
-// design-grid.js
+export class DesignGrid {
+  constructor(options = {}) {
+    this.muralSelector = options.muralSelector || '.design-mural';
+    this.indicadorSelector = options.indicadorSelector || '#design-indicador';
+    this.prevSelector = options.prevSelector || '#design-prev';
+    this.nextSelector = options.nextSelector || '#design-next';
+    this.paginaAtual = 0;
+    this.totalPaginas = options.totalPaginas || 1;
 
-let projetosDesign = [];
-const cardsPorPagina = 6;
-let paginaAtual = 0;
+    this.init();
+  }
 
-fetch('assets/data/design-grid.json')
-  .then(res => res.json())
-  .then(data => {
-    projetosDesign = data;
-    renderizarDesignCards();
-    atualizarNavegacao();
-  });
+  init() {
+    this.mural = document.querySelector(this.muralSelector);
+    this.indicador = document.querySelector(this.indicadorSelector);
+    this.prevBtn = document.querySelector(this.prevSelector);
+    this.nextBtn = document.querySelector(this.nextSelector);
 
-function renderizarDesignCards() {
-  const mural = document.querySelector(".design-mural");
-  mural.classList.remove("fade-in");
-  mural.classList.add("fade-out");
+    this.updateIndicador();
 
-  setTimeout(() => {
-    mural.innerHTML = "";
-    const inicio = paginaAtual * cardsPorPagina;
-    const fim = inicio + cardsPorPagina;
-    const cardsVisiveis = projetosDesign.slice(inicio, fim);
+    if (this.prevBtn) {
+      this.prevBtn.addEventListener('click', () => this.prevPage());
+    }
+    if (this.nextBtn) {
+      this.nextBtn.addEventListener('click', () => this.nextPage());
+    }
+  }
 
-    cardsVisiveis.forEach(projeto => {
-      const card = document.createElement("div");
-      card.className = `design-card ${projeto.tamanho || ""}`;
-      card.style.backgroundImage = `url(${projeto.imagem})`;
-      card.innerHTML = `
-        <div class="card-content">
-          <h3>${projeto.titulo}</h3>
-          <p>${projeto.descricao}</p>
-        </div>
-      `;
-      mural.appendChild(card);
-    });
+  updateIndicador() {
+    if (this.indicador) {
+      this.indicador.textContent = `Página ${this.paginaAtual + 1} de ${this.totalPaginas}`;
+    }
+  }
 
-    mural.classList.remove("fade-out");
-    mural.classList.add("fade-in");
-  }, 300);
+  prevPage() {
+    if (this.paginaAtual > 0) {
+      this.paginaAtual--;
+      this.updateIndicador();
+      // Adicione lógica para atualizar o mural
+    }
+  }
+
+  nextPage() {
+    if (this.paginaAtual < this.totalPaginas - 1) {
+      this.paginaAtual++;
+      this.updateIndicador();
+      // Adicione lógica para atualizar o mural
+    }
+  }
 }
 
-function atualizarNavegacao() {
-  const botaoPrev = document.getElementById("design-prev");
-  const botaoNext = document.getElementById("design-next");
-  const totalPaginas = Math.ceil(projetosDesign.length / cardsPorPagina);
-  botaoPrev.style.display = (paginaAtual === 0) ? "none" : "inline-block";
-  botaoNext.style.display = (paginaAtual >= totalPaginas - 1) ? "none" : "inline-block";
-  document.getElementById("design-indicador").textContent = `Página ${paginaAtual + 1} de ${totalPaginas}`;
-}
-
-document.getElementById("design-next").addEventListener("click", () => {
-  const totalPaginas = Math.ceil(projetosDesign.length / cardsPorPagina);
-  if (paginaAtual < totalPaginas - 1) {
-    paginaAtual++;
-    renderizarDesignCards();
-    atualizarNavegacao();
-  }
-});
-
-document.getElementById("design-prev").addEventListener("click", () => {
-  if (paginaAtual > 0) {
-    paginaAtual--;
-    renderizarDesignCards();
-    atualizarNavegacao();
-  }
-});
+// Para usar no main.js:
+// import { DesignGrid } from './design-grid.js';
+// const grid = new DesignGrid({ totalPaginas: 2 });

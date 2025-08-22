@@ -4,25 +4,10 @@
 @use '../abstracts/mixins';
 @use '../components/button'; // para usar `.button` com @extend
 
-/* Página Home */
-.home {
-  .carousel-dev,
-  .carousel-projetos {
-    margin-bottom: var.$spacing-md;
-  }
-
-  .ilustracao-container {
-    display: flex;
-    flex-direction: row;
-    gap: var.$spacing-sm;
-
-    @include mixins.respond-to(md) {
-      flex-direction: column;
-      align-items: stretch;
-    }
-  }
-
-  .gallery-trigger {
-    @extend .button;
-  }
+// Hero Section
+.hero-section {
+      background-image: url('../../img/back.png');
+      background-size: cover;       /* cobre toda a área */
+      background-position: center;  /* centraliza a imagem */
+      background-repeat: no-repeat; /* evita repetição */
 }
