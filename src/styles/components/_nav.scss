@@ -18,6 +18,7 @@
 .nav-links {
   display: flex;
   gap: var.$spacing-md;
+  margin-right: var.$spacing-md;
 
   a {
     color: var.$color-text-light;
@@ -33,11 +34,10 @@
   display: none;
   font-size: var.$font-size-hamburger;
   cursor: pointer;
-  margin-left: auto;
 }
 
 // Responsividade para mobile
-@media (max-width: 768px) {
+@media (max-width: 950px) {
   .nav-links {
     display: flex;
     flex-direction: column;

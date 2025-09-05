@@ -16,6 +16,7 @@
   .nav-logo {
     font-size: var.$font-size-nav-logo;
     font-weight: bold;
+    margin-right: auto;
 
     img {
       height: 25px;
@@ -24,7 +25,7 @@
         height: 20px;
       }
     }
-    margin-right: auto;
+    
   }
 }
 
