@@ -1,26 +1,50 @@
-# 🎨 Portfólio Pessoal — Rafael Elyah
+# Rafael Elyah - Portfolio
 
-Este repositório contém o código-fonte do meu portfólio pessoal, publicado via **GitHub Pages**.
+Por muito tempo pensei em como criar meu portfólio. Não queria algo padrão, com seções previsíveis e frases prontas. Queria que fosse uma extensão do que penso, do que sinto, uma página que contasse uma história, mesmo em silêncio.
 
-🔗 **Acesse o site:** [rafaelelyah.github.io](https://rafaelelyah.github.io)
+Cada parte dessa landing page foi construída como quem escreve um poema: com ritmo, intenção e espaço para respirar. Usei Adobe XD, Illustrator e Photoshop, mas o que mais usei foi tempo... tempo para escutar o que eu queria dizer sem dizer demais.
 
----
+Hoje compartilho esse projeto. Não é só uma vitrine. É uma tentativa de traduzir pensamento em forma.
 
-## 🛠️ Tecnologias utilizadas
+## Processo Criativo
 
-- **Vite** — build ultra rápido para front-end moderno  
-- **Sass** — pré-processador CSS  
-- **JavaScript (ES Modules)**  
-- **GitHub Pages** — para hospedagem estática
+Este portfólio foi desenvolvido usando o **Growing** - um sistema de design modular que permite criar interfaces com profundidade e significado. Cada elemento visual foi cuidadosamente posicionado, cada transição pensada como parte de uma narrativa maior.
 
----
+### Ferramentas Utilizadas
 
-## ⚙️ Estrutura visual
+- **Adobe XD, Illustrator & Photoshop** - Design e prototipagem
+- **Growing Framework** - Sistema de design modular
+- **SCSS** - Arquitetura de estilos modulares
+- **Vite** - Build tool moderno e performático
+- **Vanilla JavaScript** - Interatividade sem frameworks pesados
 
-Este portfólio foi desenvolvido com base no framework **Codessa**, utilizando design atômico, tokens Sass e componentes semânticos para garantir modularidade, clareza e identidade visual.
+## Arquitetura Técnica
 
-> Powered by [Codessa](https://github.com/rafaelelyah/codessa)
+O projeto utiliza uma arquitetura modular baseada no conceito de "árvores crescendo":
 
----
+```
+myterrain/
+├── foundation/          # Base sólida do design system
+│   ├── sprouts.scss    # Mixins e utilitários
+│   └── index.scss      # Ponto de entrada da foundation
+├── mytree/             # Componentes específicos do projeto
+│   ├── base.scss       # Estilos base e layout
+│   ├── hero.scss       # Seção principal
+│   ├── navigation.scss # Navegação
+│   └── ...             # Outros componentes
+└── sparks/             # JavaScript modular
+    ├── gallery.js      # Sistema de galerias
+    ├── modal.js        # Modais interativos
+    └── index.js        # Ponto de entrada JS
+```
 
-Feito por [Rafael Elyah](https://github.com/rafaelelyah)
+## Filosofia do Design
+
+Este portfólio não é apenas uma coleção de trabalhos. É uma manifestação física do pensamento criativo onde cada pixel, cada transição, cada espaço em branco conta parte da história. Construído com paciência e intenção, como raízes crescendo lentamente em busca da luz.
+
+## Links
+
+- [Behance - Projeto Original](https://behance.net/rafaelelyah)
+- [LinkedIn](https://linkedin.com/in/rafaelelyah)
+- [GitHub - Growing Framework](https://github.com/rafaelelyah/codessa-growing)
+- [GitHub - Portfólio Completo](https://rafaelelyah.github.io)

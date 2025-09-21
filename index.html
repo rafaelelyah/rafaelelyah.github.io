@@ -1,148 +1,577 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portfólio de Rafael Elyah — desenvolvedor e designer. Veja projetos em desenvolvimento, ilustrações e design gráfico.">
-  <meta name="keywords" content="portfólio, desenvolvedor, designer, ilustração, projetos">
-  <meta name="author" content="Rafael Elyah">
-  <title>Rafael Elyah - Thinking, Development & Concept</title>
-  <script src="https://kit.fontawesome.com/f2e4cedd87.js" crossorigin="anonymous"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Saira:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/x-icon" href="/assets/favicon-BlEc8pkk.ico">
-  <script type="module" crossorigin src="/assets/index-Dx6yrBVC.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-DPtAXoFM.css">
-</head>
-<body>
-  <header id="main-header" class="header">
-    <nav class="nav-container">
-      <div class="nav-logo">
-        <a href="#hero"><img src="/assets/fundoescuro-B7EzlDhw.png" alt="Logo Rafael Elyah"></a>
+<html lang="pt-BR">
+  <head>
+    <title>Rafael Elyah - Thinking, Concept, Design & Code</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Rafael Elyah - Designer gráfico, web designer, ilustrador, músico, artista 3D, poeta e romancista. Especialista em branding, identidade visual e criação de experiências digitais únicas.">
+    <meta name="keywords" content="design gráfico, web design, ilustração, música, 3D, poesia, romance, branding, identidade visual, UI/UX, arte digital, Rafael Elyah">
+    <meta name="author" content="Rafael Elyah">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="pt-BR">
+    <meta name="geo.region" content="BR">
+    <meta name="geo.placename" content="Brasil">
+    <link rel="canonical" href="https://rafaelelyah.com/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://rafaelelyah.com/">
+    <meta property="og:title" content="Rafael Elyah - Thinking, Concept, Design & Code">
+    <meta property="og:description" content="Designer gráfico, web designer, ilustrador, músico, artista 3D, poeta e romancista. Especialista em branding, identidade visual e criação de experiências digitais únicas.">
+    <meta property="og:image" content="https://rafaelelyah.com/myharvest/images/og-image.jpg">
+    <meta property="og:image:alt" content="Rafael Elyah - Portfolio de Design e Arte">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="Rafael Elyah">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@rafaelelyah">
+    <meta name="twitter:creator" content="@rafaelelyah">
+    <meta name="twitter:title" content="Rafael Elyah - Thinking, Concept, Design & Code">
+    <meta name="twitter:description" content="Designer gráfico, web designer, ilustrador, músico, artista 3D, poeta e romancista. Especialista em branding, identidade visual e criação de experiências digitais únicas.">
+    <meta name="twitter:image" content="https://rafaelelyah.com/myharvest/images/twitter-card.jpg">
+    <meta name="twitter:image:alt" content="Rafael Elyah - Portfolio de Design e Arte">
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Rafael Elyah",
+      "alternateName": "Rafael Elyah",
+      "description": "Designer gráfico, web designer, ilustrador, músico, artista 3D, poeta e romancista. Especialista em branding, identidade visual e criação de experiências digitais únicas.",
+      "url": "https://rafaelelyah.com",
+      "image": "https://rafaelelyah.com/myharvest/images/profile.jpg",
+      "sameAs": [
+        "https://www.linkedin.com/in/rafaelelyah",
+        "https://www.behance.net/rafaelelyah",
+        "https://www.instagram.com/rafaelelyah",
+        "https://github.com/rafaelelyah"
+      ],
+      "jobTitle": "Designer Gráfico & Desenvolvedor Web",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Freelancer"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "BR"
+      },
+      "knowsAbout": [
+        "Design Gráfico",
+        "Web Design",
+        "Ilustração",
+        "Música",
+        "Arte 3D",
+        "Poesia",
+        "Romance",
+        "Branding",
+        "Identidade Visual",
+        "UI/UX Design",
+        "Arte Digital"
+      ],
+      "hasOccupation": [
+        {
+          "@type": "Occupation",
+          "name": "Designer Gráfico",
+          "occupationLocation": {
+            "@type": "City",
+            "name": "São Paulo",
+            "addressCountry": "BR"
+          }
+        },
+        {
+          "@type": "Occupation",
+          "name": "Web Designer",
+          "occupationLocation": {
+            "@type": "City",
+            "name": "São Paulo",
+            "addressCountry": "BR"
+          }
+        },
+        {
+          "@type": "Occupation",
+          "name": "Ilustrador",
+          "occupationLocation": {
+            "@type": "City",
+            "name": "São Paulo",
+            "addressCountry": "BR"
+          }
+        },
+        {
+          "@type": "Occupation",
+          "name": "Músico",
+          "occupationLocation": {
+            "@type": "City",
+            "name": "São Paulo",
+            "addressCountry": "BR"
+          }
+        },
+        {
+          "@type": "Occupation",
+          "name": "Artista 3D",
+          "occupationLocation": {
+            "@type": "City",
+            "name": "São Paulo",
+            "addressCountry": "BR"
+          }
+        },
+        {
+          "@type": "Occupation",
+          "name": "Poeta",
+          "occupationLocation": {
+            "@type": "City",
+            "name": "São Paulo",
+            "addressCountry": "BR"
+          }
+        },
+        {
+          "@type": "Occupation",
+          "name": "Romancista",
+          "occupationLocation": {
+            "@type": "City",
+            "name": "São Paulo",
+            "addressCountry": "BR"
+          }
+        }
+      ]
+    }
+    </script>
+
+    <meta name="theme-color" content="#000000">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <link rel="icon" type="image/x-icon" href="/assets/favicon-D-__QuI8.ico">
+    <script type="module" crossorigin src="/assets/main-BYR8I2C2.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/main-Ax8QPleN.css">
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="header-logo">
+        <a href="#hero"><img src="data:image/png;base64,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" alt="Rafael Elyah Logo" class="logo-image"></a>
       </div>
-      <div class="nav-links">
-        <a href="#sobre">Sobre</a>
-        <a href="#thinking">Thinking</a>
-        <a href="#concept">Concept</a>
-        <a href="#design">Design</a>
-        <a href="#code">Code</a>
-        <a href="#contato">Contato</a>
+      <nav class="main-nav" role="navigation" aria-label="Navegação principal">
+        <ul>
+          <li><a href="#thinking" class="nav-link">THINKING</a></li>
+          <li><a href="#concept" class="nav-link">CONCEPT</a></li>
+          <li><a href="#design" class="nav-link">DESIGN</a></li>
+          <li><a href="#code" class="nav-link">CODE</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger-btn" aria-label="Abrir menu de navegação" aria-expanded="false">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </header>
+
+    <!-- Mobile Navigation Menu -->
+    <nav class="mobile-nav-overlay" id="mobile-nav" role="dialog" aria-modal="true" aria-label="Menu de navegação mobile">
+      <div class="mobile-nav-content">
+        <button class="mobile-nav-close" aria-label="Fechar menu de navegação">×</button>
+        <ul class="mobile-nav-links">
+          <li><a href="#hero" class="mobile-nav-link">HOME</a></li>
+          <li><a href="#thinking" class="mobile-nav-link">THINKING</a></li>
+          <li><a href="#concept" class="mobile-nav-link">CONCEPT</a></li>
+          <li><a href="#design" class="mobile-nav-link">DESIGN</a></li>
+          <li><a href="#code" class="mobile-nav-link">CODE</a></li>
+          <li><a href="#contact" class="mobile-nav-link">CONTACT</a></li>
+        </ul>
       </div>
-      <div class="hamburger">☰</div>
     </nav>
-  </header>
 
-  <main class="container">
-    <!-- Hero Section -->
-    <section id="hero" class="hero-section">
-      <div class="hero-overlay">
-        <h1>Bem-vindo ao meu portfólio</h1>
-      </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="sobre" class="mid-section">
-      <div class="hero-overlay">
-      <h2>Sobre mim</h2>
-      <p>Texto Texto</p>
-      </div>
-
-    </section>
-
-    <section id="thinking" class="short-section">
-      <div class="row">
-
-        <div class="col">
-          <h2>Thinking</h2>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam quasi repudiandae voluptates aliquam ut, aliquid ipsum? Inventore, animi debitis. Aspernatur aut inventore iste qui fugit quos? Tempora libero neque qui!</p>
-        </div>
-        <div class="col"></div>
-      </div>
-
-      
-    </section>
-
-    <!-- Thinking Section -->
-    <section id="thinking-content" class="fullscreen-section">
-      <h2>Content</h2>
-    </section>
-        <!-- Concept Section -->
-    <section id="concept" class="short-section">
-      <div class="row">
-
-        <div class="col">
-         </div>
-        <div class="col">
-            <h2>Concept</h2>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam quasi repudiandae voluptates aliquam ut, aliquid ipsum? Inventore, animi debitis. Aspernatur aut inventore iste qui fugit quos? Tempora libero neque qui!</p>
-       
-        </div>
-      </div>
-
-      
-    </section>
-
-    <section id="concept-content" class="fullscreen-section">
-      <h2>Content</h2>
-
-    </section>
-
-    <!-- Design Section -->
-      <section id="design" class="short-section">
-      <div class="row">
-
-        <div class="col">
-          <h2>Design</h2>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam quasi repudiandae voluptates aliquam ut, aliquid ipsum? Inventore, animi debitis. Aspernatur aut inventore iste qui fugit quos? Tempora libero neque qui!</p>
-        </div>
-        <div class="col"></div>
-      </div>
-    </section>
-
-    <section id="design-content" class="fullscreen-section">
-      <h2>Content</h2>
-    </section>
-
-    <!-- Code Section -->
-
-      <section id="code" class="short-section">
-        <div class="row">
-
-          <div class="col">
-          </div>
-          <div class="col">
-            <h2>Code</h2>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam quasi repudiandae voluptates aliquam ut, aliquid ipsum? Inventore, animi debitis. Aspernatur aut inventore iste qui fugit quos? Tempora libero neque qui!</p>
-        
-        </div>
-      </div>
-
+    <main class="main-content" role="main">
+      <section id="hero" class="hero-section">
+        <h1>RAFAEL ELYAH</h1>
       </section>
-    <section id="code-content" class="fullscreen-section">
-      <h2>Content</h2>
-    </section>
 
-    <!-- Contact Section -->
-    <section id="contato" class="short-section">
-      <h2>Contato</h2>
-      <p>
-        Você pode entrar em contato comigo pelo 
-        <a href="https://wa.me/11957649475" target="_blank">WhatsApp</a>
-      </p>
+      <section id="thinking" class="thinking-section">
+        <header class="section-header">
+          <h2>"Diante do caos...</h2>
+        </header>
+        <div class="thinking-top-row">
+          <div class="thinking-item-1">
+            <h3>... o pensamento</h3>
+            <p>
+            Pensamentos que não cabem...
+            por mais que tentemos conter,
+            as ideias vem e vão,
+            tentativas de dizer
+            o indizível.
 
-      <p>
-        Ou pode me enviar um e-mail como os maias e os incas:<br />
-        <a href="mailto:rafaelelyah@outlook.com">rafaelelyah@outlook.com</a>
-      </p>
-    </section>
-  </main>
+            De conter o universo com as mãos...
+            </p>
+          </div>
+          <div class="thinking-item-2">
+            <h3>O que...</h3>
+            <p>
+              O que fazer
+              quando o medo bate a porta
+              e ameaça por a solta
+              toda a nossa solidão?
 
-  <!-- Rodapé -->
-  <footer class="footer">
-    <div class="footer-content">
-      <p>© 2025 Rafael Elyah. Todos os direitos reservados.</p>
-      <p>Powered by <a href="https://github.com/rafaelelyah/codessa" target="_blank">Codessa</a></p>
+              O que dizer
+              quando o mundo se transforma
+              em um abrir e fechar de bocas
+              sem nenhuma expressão?
+
+              O que amar,
+              se até mesmo nosso ego
+              se dissolve em desprezo
+              ao ver no que se tornou?
+
+              O que chorar,
+              se o findar de cada verso
+              mostra meio que sem jeito
+              que o sentimento acabou?
+
+              <span class="date">24/01/2022</span>
+
+            </p>
+            <a href="https://medium.com/@rafaelelyah" target="_blank" rel="noopener" class="leaf-btn-outline">Ler no Medium</a>
+          </div>
+          <div class="thinking-item-3">
+            <h3>...</h3>
+            <p class="leaf-text-prose">
+            Ele percebeu tudo aquilo ao ver não só a marca na nuca da criança mudar do circuito para uma rocha de magma, mas também ao ver seus cabelos e orelhas de folhas púrpura mudarem de cor para um alaranjado e as folhas abaixo de seus olhos se tornarem de um cinza queimado.
+
+            Um dos guardas que estava próximo sacou do punhal que levava e berrou para o sacerdote que atirasse a criança do penhasco. O sacerdote engoliu seco e todos os outros pararam para observar, era claro que eles queriam a criança, muito mais agora que haviam descoberto que ela era o que era. Liam observou um deles mover os dedos ao lado do corpo, e uma fumaça púrpura começar a subir do solo lentamente. Aquele sacerdote era um Onirico, sem dúvida alguma, e não deixaria os guardas matarem a criança.
+
+            E Liam também não.
+
+            O Alado abriu as asas com força acertando dois sacerdotes e o guarda que segurava o punhal, girou o corpo para pegar a arma ainda no ar e a atirou acertando o braço do sacerdote que segurava o pequeno Ícaro, que gritou de dor e soltou a criança. Liam mergulhou no penhasco pegando a criança nos braços e alçou vôo por sobre a cidadela em velocidade, batendo por entre as árvores após uma flecha perfurar uma de suas asas, mas conseguiu escapar.
+            
+            Depois daquilo, o choro das crianças ecoou por um bom tempo, até que Tibos se tornou uma grande fogueira.
+            
+          </p>
+            <a href="https://www.wattpad.com/user/rafaelelyah" target="_blank" rel="noopener" class="leaf-btn-outline">Ler no Wattpad</a>
+          </div>
+        </div>
+        <div class="thinking-bottom-row">
+          <!-- Coluna 1: Imagem + Player de Áudio Overlay -->
+          <div class="thinking-bottom-item media-item">
+            <div class="media-container">
+              <img src="/assets/arcano22-MYQgR6lG.png" alt="Ilustração artística representando reflexões sobre o caos - obra de Rafael Elyah" class="media-image">
+              <button class="media-play-btn" aria-label="Reproduzir áudio 1">
+              </button>
+              <audio class="media-audio" id="audio1" preload="none">
+                <source src="/assets/tarot-C0WIxS7b.m4a" type="audio/mpeg">
+                Seu navegador não suporta o elemento de áudio.
+              </audio>
+
+              <!-- Enhanced Controls -->
+              <div class="audio-controls">
+                <button class="skip-back" aria-label="Voltar 10 segundos">⏪</button>
+                <div class="progress-container">
+                  <span class="current-time">0:00</span>
+                  <input type="range" class="progress-bar" min="0" max="100" value="0" title="Barra de progresso">
+                  <span class="duration">0:00</span>
+                </div>
+                <button class="skip-forward" aria-label="Avançar 10 segundos">⏩</button>
+                <button class="mute-btn" aria-label="Alternar mudo">🔊</button>
+                <input type="range" class="volume-slider" min="0" max="100" value="70" title="Controle de volume">
+              </div>
+            </div>
+          </div>
+
+          <!-- Coluna 2: Imagem + Player de Áudio Overlay -->
+          <div class="thinking-bottom-item media-item">
+            <div class="media-container">
+              <img src="/assets/meux-DJDQvz7O.png" alt="Ilustração artística representando o pensamento diante do medo - obra de Rafael Elyah" class="media-image">
+              <button class="media-play-btn" aria-label="Reproduzir áudio 2">
+
+              </button>
+              <audio class="media-audio" id="audio2" preload="none">
+                <source src="/assets/comentario-C8Z-Ta5R.m4a" type="audio/mpeg">
+                Seu navegador não suporta o elemento de áudio.
+              </audio>
+
+              <!-- Enhanced Controls -->
+              <div class="audio-controls">
+                <button class="skip-back" aria-label="Voltar 10 segundos">⏪</button>
+                <div class="progress-container">
+                  <span class="current-time">0:00</span>
+                  <input type="range" class="progress-bar" min="0" max="100" value="0" title="Barra de progresso">
+                  <span class="duration">0:00</span>
+                </div>
+                <button class="skip-forward" aria-label="Avançar 10 segundos">⏩</button>
+                <button class="mute-btn" aria-label="Alternar mudo">🔊</button>
+                <input type="range" class="volume-slider" min="0" max="100" value="70" title="Controle de volume">
+              </div>
+            </div>
+          </div>
+
+          <!-- Coluna 3: Texto explicativo -->
+          <div class="thinking-bottom-item">
+            <div>
+            <h3>... e o som</h3>
+            <p>
+
+            há coisas que não conseguimos falar,
+            apenas vibramos,
+            apenas ressoamos...
+
+            </p>
+            <div class="audio-links">
+              <a href="https://www.bandlab.com/rafaelelyah" target="_blank" rel="noopener" class="leaf-btn-outline">Ouvir no Bandlab</a>
+              <a href="https://soundcloud.com/rafael-elyah" target="_blank" rel="noopener" class="leaf-btn-outline">Ouvir no SoundCloud</a>
+              <a href="https://www.youtube.com/@rafaelelyah" target="_blank" rel="noopener" class="leaf-btn-outline">Ouvir no YouTube</a>
+            </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="concept" class="concept-section">
+        <header class="section-header">
+          <h2>A vida se molda e molda ao redor...</h2>
+        </header>
+        <div class="concept-grid">
+          <div class="concept-item">
+            <div>
+            <h3>... nas formas</h3>
+            <p>
+              São gestos, são pausas...
+              Cada linha que traço carrega o eco de um
+              som, cada cor que escolho,
+              o silêncio de um verso.
+              E aos poucos, vem as formas...
+            </p>
+            </div>
+          </div>
+          <div class="concept-item">
+            <div class="concept-media-container">
+              <img src="/assets/birdy-CtZOPLRh.png" alt="Galeria de ilustrações - obra de Rafael Elyah" class="concept-image" id="gallery-img-1">
+            </div>
+          </div>
+          <div class="concept-item">
+            <div class="concept-media-container">
+              <img src="/assets/fersOfolin-DRlGrkCq.png" alt="Galeria de ilustrações - obra de Rafael Elyah" class="concept-image" id="gallery-img-2">
+            </div>
+          </div>
+          <div class="concept-item">
+            <div class="concept-media-container">
+              <img src="/assets/flaming-waf9aCgJ.png" alt="Galeria de ilustrações - obra de Rafael Elyah" class="concept-image" id="gallery-img-3">
+            </div>
+          </div>
+          <div class="concept-item">
+            <div class="concept-media-container">
+              <img src="/assets/frog-CI8Nrpey.png" alt="Galeria de ilustrações - obra de Rafael Elyah" class="concept-image" id="gallery-img-4">
+            </div>
+          </div>
+          <div class="concept-item">
+            <div>
+            <h3>... na sensação</h3>
+            <p>
+              um traço, uma ideia, um impulso,
+              o invisível
+              O mundo fala em símbolos,
+              fala em imagem,
+              traduz conceitos em concretos.
+            </p></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="design" class="design-section">
+        <header class="section-header">
+          <h2>"As cores são o instante...</h2>
+        </header>
+        <div class="design-grid">
+          <div class="design-item">
+            <div class="design-media-container leaf-shadow--md">
+              <img src="/assets/encarte-CNsjbWyY.png" alt="Design de encarte - obra de Rafael Elyah" class="design-image" id="design-gallery-img-1">
+            </div>
+          </div>
+          <div class="design-item">
+            <div>
+            <h3>... os traços delimitam</h3>
+            <p>
+            São memórias, caminhos...
+            É o caminho entre o
+            sentir e o mostrar,
+            imagens que falam
+            mais que palavras,
+            curvas que mudam de direção.
+            </p>
+            </div>
+          </div>
+          <div class="design-item">
+            <div>
+            <h3>... e o vazio, ah o vazio</h3>
+            <p>
+            Quando vazio, traz medo,
+            mas daí vem a cor, o tom,
+            o vermelho que grita,
+            o azul que acalma,
+            o amarelo que espera.
+
+            Tudo fala...
+            </p>
+            </div>
+          </div>
+          <div class="design-item">
+            <div class="design-media-container leaf-shadow--md">
+              <img src="/assets/iconsetcodessa-yV5Qgl3w.png" alt="Icon set Codessa - obra de Rafael Elyah" class="design-image" id="design-gallery-img-2">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="code" class="code-section">
+        <header class="section-header">
+          <h2>... são loops, ciclos...</h2>
+        </header>
+        <div class="code-grid">
+          <div class="code-item">
+            <h3>... e lógica</h3>
+            <p>
+              
+            E as tentativas de encontrar a ordem,
+            como quem escreve uma partitura,
+            para guardar na memória.
+            </p>
+          </div>
+          <div class="code-item">
+            <h3>... e padrões</h3>
+            <p>
+
+            Há beleza na repetição.
+            Um loop é como um refrão,
+            retorna, insiste, transforma,
+            os padrões, as prisões...
+            </p>
+          </div>
+          <div class="code-item">
+            <h3>...variáveis</h3>
+            <p>
+
+            Há beleza também no que muda,
+            tudo muda.
+            O valor que hoje resolva, amanhã quebra.
+            Promessas, instáveis,
+
+            guardam o estado, mas nunca o destino.
+            </p>
+          </div>
+          <div class="code-item leaf-align-center">
+            <img src="/assets/logocodessa-C5H_wVHY.png" alt="Logo Codessa - Sistema de Design" class="code-logo">
+            <div class="code-link-wrapper">
+              <a href="https://www.github.com/rafaelelyah/codessa" target="_blank" rel="noopener" class="leaf-btn-outline">Ver no Github</a>
+            </div>
+          </div>
+          <div class="code-item leaf-align-center">
+            <img src="/assets/growing-DcOuDEeF.png" alt="Logo Codessa - Sistema de Design" class="code-logo">
+            <div class="code-link-wrapper">
+              <a href="https://www.github.com/rafaelelyah/codessa-growing" target="_blank" rel="noopener" class="leaf-btn-outline">Ver no Github</a>
+            </div>
+          </div>
+          <div class="code-item leaf-align-center">
+            <img src="/assets/dbot-B2YLtM3U.png" alt="Logo Codessa - Sistema de Design" class="code-logo">
+            <div class="code-link-wrapper">
+              <a href="https://www.github.com/rafaelelyah/asarado-dbot" target="_blank" rel="noopener" class="leaf-btn-outline">Ver no Github</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact-section">
+        <div class="contact-grid">
+          <div class="contact-item">
+            <h2>E nos encontra.</h2>
+            <p>
+              
+            É que o acaso nos leva
+            para onde nunca imaginamos,
+            e talvez, exatamente
+            para onde deveríamos
+            estar.
+            </p>
+          </div>
+          <div class="contact-item">
+            <form class="contact-form" action="https://formspree.io/f/xrbandap" method="post">
+              <input type="hidden" name="_subject" value="Nova mensagem do portfólio">
+              <div class="form-group">
+                <label for="nome">Então me diz, quem você é...</label>
+                <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="email">... de onde vem</label>
+                <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="telefone">... como nos falamos</label>
+                <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999">
+              </div>
+              
+              <div class="form-group">
+                <label for="mensagem">... e sobre o que?</label>
+                <textarea id="mensagem" name="mensagem" rows="4" placeholder="Digite sua mensagem aqui..." required></textarea>
+              </div>
+              
+              <button type="submit">Enviar</button>
+              <div id="form-message" class="form-message success">
+                Mensagem enviada com sucesso! Obrigado pelo contato.
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="main-footer" role="contentinfo">
+      <div class="footer-content">
+        <p class="copyright">© 2025 Rafael Elyah</p>
+        <img src="/assets/growinglogo-D_QhrePR.png" alt="Growing Logo" class="footer-logo">
+        <p class="powered-by">Powered by Growing</p>
+      </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-to-top" class="scroll-to-top-btn" aria-label="Voltar ao topo">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAAAqCAYAAAAQ0R0WAAAACXBIWXMAAAsSAAALEgHS3X78AAABwklEQVRogeXawXGDMBCF4QcNxCX4HGCSEtxJJh2khJTiUlyCPcDdJdgVkIP1PAoJBoGkXeT/xrAH8c0yXMi6roOWirLaANi0TX2WPgvLpQ/ADM4BwLEoq3fh49xTAWThvAF4AXDQgiQO1MNhapBEgQZwmAokMaARHCaOJAI0EYeJIkUHcsRhYkhRgWbiMBGkaEALcVh0pChAjjjXkftRkYIDOeJ8AthBEVJQIFectqn3bVMfoQgpGNAcHF5oQgoCtASHaUHyDuQDh2lA8grkE4dJI3kDCoHDJJG8AIXEYVJIi4Fi4DAJpEVAMXFYbKTZQBI4LCbSLCBJHBYLyRlIAw6LgeQEpAmHhUaaDKQRh4VEmgSkGYeFQhoFWgMOC4H0EGhNOMw30iDQGnGYT6R/gdaMw3wh/QFKAYf5QPoFlBIOW4p0B0oRhy1ByoG0cdhcpOy1KJPHsTMPfsAN4lFXALscwBeeBAdw3qTvrOs6FGW1B/DxYDgJHLsJm3SC2SDgtkWngcHkcIDRTToB2LVNfcnN8MUM95GSxGEDSHccAMjs/6R7X7Okceys1+0MCwfoAZnhDYCt0X2airLaArjYOADwA+W2fAPtONG9AAAAAElFTkSuQmCC" alt="Seta para cima" class="arrow-icon">
+    </button>
+
+
+    <!-- Gallery Modal -->
+    <div id="gallery-modal" class="gallery-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-description">
+      <div class="gallery-modal-content">
+        <!-- Botão Anterior -->
+        <button class="gallery-nav-btn gallery-nav-prev" aria-label="Imagem anterior">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAABICAYAAACA/2cKAAAACXBIWXMAAAsSAAALEgHS3X78AAAB6klEQVRogdXazW3CQBCG4RcaMAUEiQ5COuBMFZSQEugkShHhTAnQARIN4ArIwcayifHfzl/mah8eLVq8O/PN7vc7USo/LNfAHthl2+ut/mwWBVoij0AGnIFNHTt3cjXqCQnwDhzzw3LxeMcd2oJ8VAPr+tN3IOt1BjZuKzoQCbACFi7QEcicYlNdzKETkCcw3kxTkWAITUGCETQVCQZQCSQoQ6WQoAiVRIISVBoJClANJAhDtZAgCNVEghBUGwkCUAskJEKtkJAAtUTCRKg1EiZAPZAwEuqFhBFQTyQMhHojYQA0AhJ6oFGQ0AGNhIQX0GhIaIFGRMITNCoSatDISCih0ZEAs9vP2wo4ERgJxYregMuAdzNgrarpqHnZJ99QNEz76is/LHeqohc1B/gP2GrXR8c2/kcjY/98maJiW7/1EbEvT0/RsJ3n0UjY3hN+FOygO1ME7OBbqDd21L3eEzu6U+KFndR78sBO7uZZY5P6o5bY5I6zFVakh2+BFZuKaGNF50yaWPHJnRZWZRaqgVWbLktjVef1klj1BIQU1iRTIoE1S+mkYk1zTylY8yTZVKxb2rGMWx4p4pd99eGWdhyxsmfAPkRYrwHYKkLsnsjtwDZyzu5QaMV+U0NCoNQ4VBvsM9te98/PfgFb7K+aqAMm1gAAAABJRU5ErkJggg==" alt="Seta esquerda" class="nav-arrow">
+        </button>
+
+        <!-- Imagem Ampliada -->
+        <div class="gallery-modal-image">
+          <img id="modal-image" src="" alt="" loading="lazy">
+        </div>
+
+        <!-- Texto Descritivo -->
+        <div class="gallery-modal-text">
+          <h3 id="modal-title">Título da Imagem</h3>
+          <p id="modal-description">Descrição detalhada da imagem...</p>
+          <div class="gallery-modal-meta">
+            <span id="modal-technique">Técnica: Digital Art</span>
+            <span id="modal-year">Ano: 2024</span>
+          </div>
+          <a id="modal-pinterest-link" href="https://br.pinterest.com/rafaelelyah/" target="_blank" rel="noopener">
+            Ver mais no Pinterest
+          </a>
+        </div>
+
+        <!-- Botão Próximo -->
+        <button class="gallery-nav-btn gallery-nav-next" aria-label="Próxima imagem">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAABICAYAAACA/2cKAAAACXBIWXMAAAsSAAALEgHS3X78AAAB30lEQVRogc3azXEaQRAG0McmgAIwVWQgh8CZJGxn4hCUgZWCD+asEFAGqiIBiAAfFiwMLCy789PfaWe7D6+mai5dPdnv986zW81+4mW63GwvipUyOYXuVrMnvOAb3rGIgv0HPSDf8HxSD4Nt6EQ6nN8O9appbiCPCYFtMNeNPKY6tpkuN2v86NFbFdvAdLl5FRzbHD+iY5vTQ2Rsc/4jKvYCSkzsVSjxsJ1QYmFvQomDvQslBrYXlPrY3lDqYh+CUg/7MJQ62EFQymMHQymLHQWlHHY0lDLYJFDyY5NByYtNCiUfNjmUPNgsUNJjs0FJi80KJR02O5Q02CJQxmOLQRmHLQplOHZybTReIrvV7Dt+9Wh9x6L4jZ5kjV2PvjmeqkB3q9lX7fB4eq9VO5r/KA4dgFxT+DENRVIQOgZJIehYJAWgKZBkhqZCkhGaEkkmaGokGaA5kCSG5kKSEJoTSSJobiQJoCWQjISWQjICWhLJQGhpJAOgNZA8CK2F5AFoTSQ9obWR9IBGQHIHGgXJDWgkJB3QaEiuQCMiOYNGRXICjYzkc9sxNBIm2z9f5trJWlgk7Y1u8XGnryqSdttxi4V2YHot1ZF8bjt2YUMg+X/b8RwbBsnltuMR+1sgJPwFuK+Uk9yazCcAAAAASUVORK5CYII=" alt="Seta direita" class="nav-arrow">
+        </button>
+
+        <!-- Botão Fechar -->
+        <button class="gallery-modal-close" aria-label="Fechar galeria">×</button>
+      </div>
     </div>
-  </footer>
-
-</body>
+  </body>
 </html>
